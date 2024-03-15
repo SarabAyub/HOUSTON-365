@@ -1,6 +1,6 @@
 @font-face {
     font-family: "barlow";
-    src: url(./Assets/barlow-font/Barlow-Medium.ttf);
+    src: url(./Assets/barlow-font/Barlow-Regular.ttf);
 }
 
 body {
@@ -445,6 +445,8 @@ nav {
     justify-content: space-between;
 }
 
+/* Book Now Component */
+
 .book-now {
     background: url('./Assets/Home/booknow.png') center/cover no-repeat; 
     padding: 100px 115px 100px 135px ;
@@ -500,12 +502,29 @@ nav {
 }
 
 .advantages {
-    background: 
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), /* Linear gradient */
-    url('./Assets/Home/advantages/Vector.png') center/cover no-repeat;
+    position: relative;
+    background:rgba(0, 0, 0, 1); 
+    z-index: 0;
+}
+
+.overlay-bg {
+    position: absolute;
+    background: url('./Assets/Home/advantages/cover.png') center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 10;
+    opacity: 0.1;
+    z-index: -1;
+    padding: 30px 135px ;
+}
+
+.advantages-content {
+    position: relative;
     display: flex;
     padding: 30px 135px;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .advantages-list > h2 {
@@ -1135,4 +1154,3 @@ footer button {
     text-align: left;
     width: 100%;
 }
-
