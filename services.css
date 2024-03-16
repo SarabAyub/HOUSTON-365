@@ -294,18 +294,30 @@ nav {
 
 .limo {
     position: relative;
-    background: darkblue;
-    padding: 130px;
+    background:rgba(0, 0, 0, 1); 
+    z-index: 0;
+    overflow: hidden;
+}
+
+.overlay-bg {
+    position: absolute;
+    top: 162px;
+    left: 83px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.content {
+    padding: 50px 115px 50px 135px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    z-index: 0;
+    z-index: 1;
 }
 
 
-.limo > h1 {
+.content > h1 {
     font-size: 24px;
     font-style: italic;
     font-weight: 700;
@@ -315,7 +327,7 @@ nav {
     z-index: 1;
 }
 
-.limo > h2 {
+.content > h2 {
     font-size: 40px;
     font-weight: 700;
     line-height: 48px;
@@ -324,7 +336,7 @@ nav {
     z-index: 1;  
 }
 
-.limo > p {
+.content > p {
     font-size: 16px;
     font-weight: 500;
     line-height: 19px;
