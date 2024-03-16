@@ -115,6 +115,7 @@ nav {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    color: #fff;
 }
 
 .cover::before {
@@ -134,6 +135,7 @@ nav {
     line-height: 77px;
     letter-spacing: 0em;
     color: rgba(255, 255, 255, 1);
+    z-index: 1;
 }
 
 .cover > p {
@@ -144,10 +146,11 @@ nav {
     color: rgba(255, 255, 255, 1);
     max-width: 40%;
     text-align: center;
+    z-index: 1;
 }
 
 .services {
-    background: rgba(12, 19, 21, 1);
+    background: black;
     padding: 50px 115px 50px 135px;
     display: flex;
     flex-direction: column;
@@ -195,9 +198,9 @@ nav {
 }
 
 .card {
-    width: 32.5%;
+    width: 32%;
     border-radius: 20px;
-    margin-bottom: 1.25vw;
+    margin-bottom: 2%;
 }
 
 .card-title{
@@ -221,24 +224,22 @@ nav {
 }
 
 .professional-drivers {
+    padding: 10px 70px 50px 135px;
     display: flex;
-    box-sizing: border-box;
-    background-color: black;
+    justify-content: space-between;
+    background: black;
 }
 
 .left {
-    flex:1;
-    box-sizing: border-box;
-    padding: 50px 0px 50px 130px;
+    padding-right: 20px;
 }
 
 .right {
-    flex:1;
-    padding: 50px 50px 50px 10px;
+    padding-left: 20px;
 }
 
 .left>img {
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .right>h1 {
@@ -250,6 +251,7 @@ nav {
     letter-spacing: 0em;
     text-align: left;
     color: rgba(255, 92, 29, 1);
+    padding-bottom: 5px;
 }
 
 .right>h2 {
@@ -260,6 +262,7 @@ nav {
     letter-spacing: 0em;
     text-align: left;
     color: rgba(255, 255, 255, 1);
+    padding-bottom: 20px;
 }
 
 .right>p {
@@ -270,9 +273,7 @@ nav {
     letter-spacing: 0em;
     text-align: left;
     color: rgba(255, 255, 255, 1);
-    width: 606px;
-    height: 192px;
-
+    padding-bottom: 5px;
 }
 
 .orange-button {
@@ -289,13 +290,149 @@ nav {
 }
 
 
+/* Limo Component */
+
+.limo {
+    position: relative;
+    background: darkblue;
+    padding: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
 
 
+.limo > h1 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    color: rgba(255, 92, 29, 1);
+    z-index: 1;
+}
 
+.limo > h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    color: rgba(255, 255, 255, 1);  
+    z-index: 1;  
+}
 
+.limo > p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: rgba(255, 255, 255, 1);
+    z-index: 1;
+}
 
+.limo-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
 
+.limo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 32%;
+}
 
+.limo-card > img {
+    width: 96px;
+    height: 96.03px;
+}
+
+/* Info Component */
+
+.info {
+    padding: 70px 70px 50px 135px;
+    display: flex;
+    justify-content: space-between;
+    background: black;
+}
+
+.info-left {
+    padding-right: 20px;
+}
+
+.info-right {
+    padding: 40px 0px 40px 20px;
+}
+
+.info-right h1 {
+    color: rgba(255, 92, 29, 1);
+    font-family: Barlow;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+
+.info-right h2 {
+    color: rgba(255, 255, 255, 1);
+    font-family: Barlow;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+
+.info-right p {    
+    font-family: Barlow;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left; 
+    color: rgba(255, 255, 255, 1); 
+}
+
+.info-right-top > h1,
+.info-right-top > h2,
+.info-right-top > p {
+    padding-bottom: 10px;
+}
+
+.info-right-top {
+    width: 100%;
+}
+
+.info-right-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-right-inner1 {
+    width: 40%;
+}
+
+.info-right-inner1-h1 {
+    padding-top: 50px;
+
+}
+
+.info-right-inner2 {
+    width: 55%;
+}
+
+.bold {
+    font-weight: 700;
+}
 
 /* Contact-Us Component */
 
