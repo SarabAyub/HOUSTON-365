@@ -275,6 +275,8 @@ nav {
     color: rgba(255, 255, 255, 1);    
 }
 
+/* Chauffeur Card Component */
+
 .chauffeur {
     background: rgba(20, 26, 28, 1);
     padding: 50px 115px 50px 135px;
@@ -283,7 +285,6 @@ nav {
     flex-direction: column;
     align-items: center;
 }
-
 
 .chauffeur>h1 {
     font-family: Barlow;
@@ -308,6 +309,14 @@ nav {
 .chauffeur>img {
     padding: 3px;
     margin-top: 2px;
+    position: relative;
+    animation: myfirst 2s 1;
+    animation-direction: alternate;
+}
+
+@keyframes myfirst {
+    0%   {left: 1500px; top: 0px;}
+    100% {left: 0px; top: 0px;}
 }
 
 .chauffeur-cards {
@@ -615,6 +624,8 @@ nav {
 .finest-tpt-img {
     text-align: center;
     padding: 10px 50px 40px 50px;
+    position: relative;
+    animation: myfirst 2s 1;
 }
 
 .finest-tpt > img {
@@ -955,6 +966,12 @@ nav {
     left: 0;
     top: 20%;
     width: 25%;
+    animation: my2nd 2s 1;
+}
+
+@keyframes my2nd {
+    0%      {left: -350px; top: -150px}
+    100%    {left: 0;   top: 20%;}
 }
 
 .questions {
