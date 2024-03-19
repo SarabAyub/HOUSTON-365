@@ -32,16 +32,16 @@
                   <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a id="servicesLink" class="nav-link dropdown-toggle" href="./services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services <img src="./Assets/Home/nav.png" alt="Dropdown Icon" class="custom-dropdown-icon">
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="./services.html">Header</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
-                </li>                
+                </li>            
                 <li class="nav-item">
                   <a class="nav-link" href="#">Fleet</a>
                 </li>
@@ -481,5 +481,20 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
         <script src="./CarouselCard.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var servicesLink = document.getElementById("servicesLink");
+            
+                servicesLink.addEventListener("click", function(event) {
+                    // Check if the dropdown toggle (custom-dropdown-icon) was clicked
+                    if (!event.target.classList.contains("custom-dropdown-icon")) {
+                        // Prevent the default navigation behavior if the link was clicked directly
+                        event.preventDefault();
+                        // Navigate to the services page
+                        window.location.href = this.getAttribute("href");
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
